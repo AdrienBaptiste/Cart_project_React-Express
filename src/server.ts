@@ -11,7 +11,7 @@ const cartController = new CartController(storage);
 
 app.post('/cart/products', (req, res) => cartController.addProduct(req, res));
 app.get('/cart/total', (req, res) => cartController.getTotal(req, res));
-app.post('/cart/clear', (req, res) => cartController.clearCart(req, res)); // Route pour vider le panier
+app.post('/cart/clear', (req, res) => cartController.clearCart(req, res));
 
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 

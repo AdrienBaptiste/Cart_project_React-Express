@@ -1,4 +1,3 @@
-// frontend/src/components/ProductComponent.tsx
 import React, { useState } from 'react';
 import { addProductToCart } from '../services/CartService';
 
@@ -14,7 +13,7 @@ export const ProductComponent: React.FC<ProductComponentProps> = ({ updateTotal 
         e.preventDefault();
         if (name && price > 0) {
             await addProductToCart(name, Number(price));
-            updateTotal(); // Met à jour le total après l'ajout du produit
+            updateTotal();
             setName('');
             setPrice(0);
         }

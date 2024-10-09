@@ -32,7 +32,7 @@ export class CartController {
     }
 
     clearCart(req: Request, res: Response): void {
-        this.storage.clear(); // Vide le stockage
+        this.storage.clear();
         console.log("Panier vidé");
         res.status(200).send("Panier vidé avec succès");
     }
